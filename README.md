@@ -1,0 +1,250 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Rahul APK Download Page</title>
+  <link href="https://fonts.googleapis.com/css2?family=Pacifico&family=Roboto&display=swap" rel="stylesheet">
+  <style>
+    body {
+      font-family: 'Roboto', sans-serif;
+      background: linear-gradient(to right, #8e2de2, #4a00e0);
+      margin: 0;
+      padding: 0;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      min-height: 100vh;
+      color: white;
+    }
+    header {
+      width: 100%;
+      background-color: #1c1c1c;
+      padding: 30px 0;
+      text-align: center;
+      box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
+    }
+    header h1 {
+      font-family: 'Pacifico', cursive;
+      font-size: 48px;
+      color: #f7c94b;
+      margin: 0;
+      letter-spacing: 2px;
+    }
+    nav {
+      margin-top: 10px;
+    }
+    nav a {
+      margin: 0 10px;
+      color: #f7c94b;
+      text-decoration: none;
+      font-weight: bold;
+    }
+    .container {
+      background: white;
+      color: #333;
+      padding: 40px;
+      border-radius: 20px;
+      box-shadow: 0 0 30px rgba(0, 0, 0, 0.3);
+      margin-top: 30px;
+      max-width: 500px;
+      width: 90%;
+      text-align: center;
+    }
+    .container p {
+      font-size: 18px;
+      margin-bottom: 20px;
+    }
+    a.download-link {
+      display: inline-block;
+      padding: 12px 30px;
+      background: linear-gradient(45deg, #00c6ff, #0072ff);
+      color: white;
+      text-decoration: none;
+      font-size: 18px;
+      border-radius: 10px;
+      transition: transform 0.3s ease, box-shadow 0.3s ease;
+      margin-top: 10px;
+    }
+    a.download-link:hover {
+      transform: scale(1.05);
+      box-shadow: 0 0 15px rgba(0, 0, 0, 0.2);
+    }
+    .features, .testimonials {
+      margin-top: 30px;
+      background: #ffffff20;
+      border-radius: 15px;
+      padding: 20px;
+      color: white;
+      max-width: 800px;
+      text-align: center;
+    }
+    .features ul {
+      list-style: none;
+      padding: 0;
+    }
+    .features li {
+      margin-bottom: 10px;
+    }
+    .testimonial {
+      font-style: italic;
+      margin-bottom: 20px;
+    }
+    .contact-form {
+      margin-top: 40px;
+      background: #fff;
+      color: #333;
+      padding: 30px;
+      border-radius: 15px;
+      box-shadow: 0 0 20px rgba(0,0,0,0.2);
+      width: 90%;
+      max-width: 500px;
+    }
+    .contact-form h2 {
+      font-size: 28px;
+      margin-bottom: 20px;
+      color: #4a00e0;
+    }
+    .contact-form input,
+    .contact-form textarea {
+      width: 100%;
+      padding: 10px;
+      margin-bottom: 15px;
+      border: 1px solid #ccc;
+      border-radius: 10px;
+      font-size: 16px;
+    }
+    .contact-form button {
+      padding: 10px 25px;
+      background-color: #4a00e0;
+      color: white;
+      border: none;
+      border-radius: 10px;
+      font-size: 16px;
+      cursor: pointer;
+    }
+    .contact-form button:hover {
+      background-color: #3a00c0;
+    }
+    footer {
+      margin: 40px 0;
+      font-size: 14px;
+      color: #ddd;
+      text-align: center;
+    }
+    #telegramPopup {
+      display: none;
+      position: fixed;
+      top: 0; left: 0;
+      width: 100%; height: 100%;
+      background: rgba(0,0,0,0.6);
+      z-index: 9999;
+      align-items: center;
+      justify-content: center;
+    }
+    #telegramPopup > div {
+      background: white;
+      color: #333;
+      padding: 30px;
+      border-radius: 15px;
+      text-align: center;
+      max-width: 400px;
+      width: 90%;
+    }
+    #telegramPopup button {
+      padding: 10px 20px;
+      border: none;
+      border-radius: 10px;
+      font-size: 16px;
+      cursor: pointer;
+      margin: 5px;
+    }
+    #telegramPopup .join {
+      background-color: #0088cc;
+      color: white;
+    }
+    #telegramPopup .close {
+      background-color: gray;
+      color: white;
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <h1>Rahul Maida</h1>
+    <nav>
+      <a href="#download">Download</a>
+      <a href="#features">Features</a>
+      <a href="#testimonials">Testimonials</a>
+      <a href="#contact">Contact</a>
+    </nav>
+  </header>
+
+  <div class="container" id="download">
+    <p>Neeche button dabao aur APK download karo:</p>
+    <a class="download-link" id="downloadButton" href="Rahul.apk" download onclick="handleDownload()">Download Rahul.apk</a>
+    <p id="downloadedMessage" style="display: none; color: green; font-weight: bold;">✅ APK download ho gaya hai!</p>
+    <a class="download-link" id="redownload" style="display: none; background: #ff4b4b;" href="Rahul.apk" download>Agar download start nahi hua toh yaha click kare</a>
+  </div>
+
+  <div class="features" id="features">
+    <h3>App ke features:</h3>
+    <ul>
+      <li>✔ Fast aur secure performance</li>
+      <li>✔ Lightweight aur easy to use</li>
+      <li>✔ Regular updates milte hain</li>
+      <li>✔ 24/7 support via contact form</li>
+    </ul>
+  </div>
+
+  <div class="testimonials" id="testimonials">
+    <h3>Users kya bolte hain:</h3>
+    <div class="testimonial">"Bohot badiya app hai, kaam asaan ho gaya!" – Aakash R.</div>
+    <div class="testimonial">"Simple aur fast, highly recommended!" – Neha S.</div>
+    <div class="testimonial">"Daily use karta hoon. Mast hai!" – Priya M.</div>
+  </div>
+
+  <div class="contact-form" id="contact">
+    <h2>Mujhse Contact Karo</h2>
+    <form action="https://formsubmit.co/rahulphotocom001@gmail.com" method="POST">
+      <input type="text" name="name" placeholder="Tumhara Naam" required>
+      <input type="email" name="email" placeholder="Tumhara Email" required>
+      <textarea name="message" rows="5" placeholder="Kya message dena chahte ho?" required></textarea>
+      <input type="hidden" name="_captcha" value="false">
+      <button type="submit">Message Bhejo</button>
+    </form>
+  </div>
+
+  <footer>
+    &copy; 2025 Rahul APK. All rights reserved.<br>
+    Designed with ❤️ by Rahul Maida
+  </footer>
+
+  <div id="telegramPopup">
+    <div>
+      <h2>Join Telegram Channel?</h2>
+      <p>Waha pe aapko latest updates aur support milega!</p>
+      <button class="join" onclick="joinTelegram()">Join Telegram Channel</button>
+      <button class="close" onclick="closePopup()">Not Now</button>
+    </div>
+  </div>
+
+  <script>
+    function handleDownload() {
+      document.getElementById('downloadButton').style.display = 'none';
+      document.getElementById('downloadedMessage').style.display = 'block';
+      document.getElementById('redownload').style.display = 'inline-block';
+      setTimeout(() => {
+        document.getElementById('telegramPopup').style.display = 'flex';
+      }, 1000);
+    }
+    function joinTelegram() {
+      window.open("https://t.me/rahulmaidaa", "_blank");
+      closePopup();
+    }
+    function closePopup() {
+      document.getElementById('telegramPopup').style.display = 'none';
+    }
+  </script>
+</body>
+</html>
